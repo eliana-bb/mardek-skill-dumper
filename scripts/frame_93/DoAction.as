@@ -1,0 +1,14 @@
+var i;
+techInfo.Legend = {name:"Legend",icon:32,desc:"The skills and spells of the very much alive grand adventurer Social Fox!",skills:[]};
+i = techInfo.Legend.skills.push({skill:"Sunder",type:"ACT",DMG:["m",1.5],stfx:{PSN:10},MP:8,accuracy:100,critical:0,AP:5,MODE:"P",elem:"EARTH",TT:"SINGLE",pfx:"sunder"});
+techInfo.Legend.skills[i - 1].desc = "A mighty gash in the fabric of space that causes EARTH damage and may Poison.";
+i = techInfo.Legend.skills.push({skill:"Quick Slash",type:"ACT",DMG:["m",1.3],stfx:{PAR:10},stat_mod:{AGL:1},MP:6,accuracy:100,critical:0,AP:5,MODE:"P",elem:"AIR",TT:"SINGLE",pfx:"stunstrike"});
+techInfo.Legend.skills[i - 1].desc = "An AIR-elemental attack so fast that the enemy becomes slower just by being near you. Lowers AGL and may cause Paralysis.";
+i = techInfo.Legend.skills.push({skill:"Dragon Smite",type:"ACT",DMG:["m",1.5],typeBonus:[["DRAGON",["m",1.75]]],MP:10,accuracy:100,critical:0,AP:5,MODE:"P",elem:"EARTH",TT:"SINGLE",pfx:"smite_earth"});
+techInfo.Legend.skills[i - 1].desc = "A powerful attack that deals 75% extra damage to... well, you can probably guess.";
+i = techInfo.Legend.skills.push({skill:"Strong Smite",type:"ACT",DMG:["m",1.4],MP:6,accuracy:100,critical:0,AP:5,MODE:"P",elem:"NONE",TT:"SINGLE",sfx:"slash_deep",pfx:"powerhit",stat_mod:{STR:1}});
+techInfo.Legend.skills[i - 1].desc = "An especially powerful attack which lowers the enemy\'s STR by 1 whole point.";
+i = techInfo.Legend.skills.push({skill:"Burning Stream",type:"ACT",DMG:["c",50,"L*1.5"],MP:12,accuracy:100,critical:0,AP:5,MODE:"M",elem:"FIRE",TT:"ANY",pfx:"burning_stream",sfx:"flame1",stfx:{NUM:15},stat_mod:{SPR:1}});
+techInfo.Legend.skills[i - 1].desc = "A powerful blast of flame which damages the enemy\'s magicness (or something like that) to lower their SPR.";
+i = techInfo.Legend.skills.push({skill:"Recover",type:"ACT",DMG:120,stfx:{ALL_BAD:20},ignore_shield:true,ignore_def:true,MP:15,AP:5,MODE:"M",elem:"LIGHT",TT:"SELF",pfx:"cure2",special:{HEALING:1},menuse:0});
+techInfo.Legend.skills[i - 1].desc = "A LIGHT spell which restores the user\'s own HP and has a chance to cure all negative status effects.";

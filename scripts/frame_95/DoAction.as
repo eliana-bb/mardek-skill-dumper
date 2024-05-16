@@ -1,0 +1,18 @@
+var i;
+techInfo.ElemCh3 = {name:"Elemancy",displayname:"Aquatica Magica",icon:37,desc:"Emela utilizes her powers from the classical Latin spellbooks of the Water Temple, casting unique and potent magic.",skills:[]};
+i = techInfo.ElemCh3.skills.push({skill:"Typhon Magicus",type:"ACT",DMG:["c",19,"L*1"],MP:8,elemBonus:["WATER",["m",1.5],["EARTH",["m",0.5]]],accuracy:100,critical:0,AP:5,MODE:"M",elem:"THAUMA",TT:"ANY",ALL_PFX:true,pfx:"whirlpool_thauma"});
+techInfo.ElemCh3.skills[i - 1].desc = "A powerful arcane storm is spawned; causing THAUMA damage to target(s). The oceanic vortex causes +50% DMG to WATER foes and -50% DMG to EARTH foes.";
+i = techInfo.ElemCh3.skills.push({skill:"Scald",type:"ACT",DMG:["c",14,"L*1"],stfx:{NUM:25},MP:8,usesEmpower:"WATER",accuracy:100,critical:0,AP:10,MODE:"M",elem:"FIRE",TT:"SINGLE",pfx:"scald"});
+techInfo.ElemCh3.skills[i - 1].desc = "Scald the target with boiling water so hot it burns, dealing FIRE damage and causing Numb 25% of the time. This skill uses WATER Empower to boost its effect.";
+i = techInfo.ElemCh3.skills.push({skill:"Spira Oceani",type:"ACT",DMG:["c",20,"L*1"],stat_mod:{SPR:1,MDEF:1},MP:10,accuracy:100,critical:0,AP:10,MODE:"M",elem:"WATER",TT:"SINGLE",pfx:"torrent"});
+techInfo.ElemCh3.skills[i - 1].desc = "A riptide current surrounds the target, causing WATER damage and reducing MDEF and SPR by 1.";
+i = techInfo.ElemCh3.skills.push({skill:"Tsunami",type:"ACT",DMG:["c",19,"L*1.35"],MP:18,MODE:"M",elem:"WATER",TT:"ALL_e",pfx:"tsunami",ALL_PFX:true,CENTRED:true});
+techInfo.ElemCh3.skills[i - 1].desc = "Rumbling waves crash over all enemies; causing heavy WATER damage to every target.";
+i = techInfo.ElemCh3.skills.push({skill:"Aqua Ring",type:"ACT",DMG:38,MP:14,stfx:{SHW:100,RGN:100},AP:5,MODE:"M",ignore_shield:true,ignore_def:true,elem:"WATER",TT:"SINGLE",buff:true,pfx:"water_ring",special:{HEALING:1},menuse:1});
+techInfo.ElemCh3.skills[i - 1].desc = "An infinity ring of healing water envelops and protects the target, healing their HP as well as granting Hydro Shell and Regen status effects.";
+i = techInfo.ElemCh3.skills.push({skill:"Mistical Rain",type:"ACT",DMG:32,MP:24,stfx:{SIL:100,RGN:5},stat_mod:{MDEF:1},no_dmg_split:true,ignore_shield:true,ignore_def:true,AP:3,MODE:"M",elem:"WATER",TT:"ALL_p",pfx:"rain_water",ALL_PFX:true,CENTRED:true,special:{HEALING:1}});
+techInfo.ElemCh3.skills[i - 1].desc = "A somber rainstorm erupts and clouds appear over the battlefield, healing the party. The potent magical energy increases MDEF by 1, cures Silence, and has a 5% chance to grant Regen. \nThis version is not affected by MDEF.";
+i = techInfo.ElemCh3.skills.push({skill:"Eclipsis Lunae",type:"ACT",stfx:{DRK:40,SIL:40},stat_mod:{SPR:1},MP:18,AP:3,MODE:"S",elem:"WATER",TT:"ALL_e",pfx:"lunar_eclipse",ALL_PFX:true,CENTRED:true});
+techInfo.ElemCh3.skills[i - 1].desc = "The moon is eclipsed, affecting the potency and accuracy of enemies\' spells. Reduces all foes\' SPR by 1, and has a 40% chance to Blind and/or Silence.";
+i = techInfo.ElemCh3.skills.push({skill:"Aqualung",type:"ACT",MP:1,accuracy:100,AP:1,stfx:{UWB:100},MODE:"M",elem:"WATER",TT:"ANY",special:{HEALING:1},menuse:"ONLY",ADD_STFX:true});
+techInfo.ElemCh3.skills[i - 1].desc = "Emela\'s signature spell that grants the target the ability to breathe underwater and protects them from \'underwater dangers\', like oxygen deprivation and split ends.";

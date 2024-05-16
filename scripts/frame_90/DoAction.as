@@ -1,0 +1,10 @@
+var i;
+techInfo.BrawlCh2 = {name:"Martial Arts",icon:9,desc:"Perform various unarmed combat moves.",skills:[]};
+i = techInfo.BrawlCh2.skills.push({skill:"Brutal Strike",type:"ACT",DMG:["m",2.25],MP:1,accuracy:75,critical:10,AP:5,MODE:"P",elem:"NONE",TT:"SINGLE",sfx:"punch1",pfx:"powerhit"});
+techInfo.BrawlCh2.skills[i - 1].desc = "Beat the [PROFANITY] out of the target, hitting them with 225% ATK. Only 75% accuracy though.";
+i = techInfo.BrawlCh2.skills.push({skill:"Dizzy Punch",type:"ACT",DMG:["m",1.25],MP:3,accuracy:90,critical:10,AP:10,MODE:"P",elem:"NONE",TT:"SINGLE",sfx:"punch1",pfx:"powerhit",stfx:{CNF:50,DRK:10}});
+techInfo.BrawlCh2.skills[i - 1].desc = "Score a dirty hit on the soft spot, hitting them with 125% ATK and with a 50% chance to Confuse and 10% to Blind. 90% accurate.";
+i = techInfo.BrawlCh2.skills.push({skill:"Shut The Hell Up!",type:"ACT",DMG:["m",1.25],stfx:{SIL:50},MP:3,accuracy:90,critical:5,AP:10,MODE:"P",elem:"DARK",TT:"SINGLE",pfx:"mutepunch"});
+techInfo.BrawlCh2.skills[i - 1].desc = "Beat the voicebox out of the annoying mother [PROFANITY] with a 50% chance to Silence. 90% accurate.";
+i = techInfo.BrawlCh2.skills.push({skill:"Chakra",type:"ACT",DMG:50,MP:0,stfx:{NUM:100},ignore_shield:true,ignore_def:true,stat_mod:{SPR:1,STR:1},accuracy:255,AP:5,MODE:"M",elem:"FIRE",TT:"SELF",pfx:"chakra",special:{HEALING:1}});
+techInfo.BrawlCh2.skills[i - 1].desc = "Channel the energy of your awesome body to recover HP, remove Numbness and increase STR/SPR by 1.";

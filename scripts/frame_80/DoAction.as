@@ -1,0 +1,16 @@
+var i;
+techInfo.Merc = {name:"Techniques",icon:10,desc:"Various battle techniques, used by resourceful and powerful warriors.",skills:[]};
+i = techInfo.Merc.skills.push({skill:"Rogue Fury",type:"ACT",DMG:20,MP:8,stat_mod:{STR:[1,2],AGL:[1,2]},stfx:{BSK:100},ignore_shield:true,ignore_def:true,AP:5,MODE:"M",elem:"FIRE",TT:"SELF",pfx:"chakra",special:{HEALING:1}});
+techInfo.Merc.skills[i - 1].desc = "A technique used to enter a berserker rage, doubling damage but becoming impossible to control. Slightly heals and increases STR/AGL by 1 to 2.";
+i = techInfo.Merc.skills.push({skill:"Barbarous Hack",type:"ACT",DMG:["m",1],elem:"DARK",MP:5,accuracy:100,critical:0,stat_mod:{DEF:1},remove_stfx:{RGN:100,PSH:35,BUB:35},AP:5,MODE:"P",elem:"NONE",TT:"SINGLE",pfx:"slash_crescent"});
+techInfo.Merc.skills[i - 1].desc = "A DARK twisting blade strike that reduces DEF by 1, removes Regen and has a 35% chance to remove P. Shield.";
+i = techInfo.Merc.skills.push({skill:"Crescendo Slash",type:"ACT",DMG:["m",1,null,["crescendo",0.2]],MP:2,critical:0,accuracy:100,AP:5,MODE:"P",elem:"NONE",TT:"SINGLE",pfx:"crescendoslash"});
+techInfo.Merc.skills[i - 1].desc = "An attack that when used, increases its own damage by 20% and all of Zach\'s other damage by 10%. This can stack up to 3 times per battle.";
+i = techInfo.Merc.skills.push({skill:"Coup de Grace",type:"ACT",DMG:["m",1],special:{COUP_DE_GRACE:1},MP:10,accuracy:100,critical:0,AP:5,MODE:"P",elem:"NONE",TT:"SINGLE",pfx:"generic_slam_fire"});
+techInfo.Merc.skills[i - 1].desc = "An attack that deals more damage the more status effects there are on the target.";
+i = techInfo.Merc.skills.push({skill:"Assassin\'s Strike",type:"ACT",DMG:["m",1],MP:3,accuracy:100,critical:0,AP:5,MODE:"P",elem:"AIR",TT:"SINGLE",pfx:"slash_crescent"});
+techInfo.Merc.skills[i - 1].desc = "THIS DOES NOT WORK CURRENTLY. Damage is based on AGL instead of STR and damage is reduced by enemy\'s AGL instead of DEF.";
+i = techInfo.Merc.skills.push({skill:"Swift End",type:"ACT",DMG:["m",1],MP:5,stfxBonus:["PAR",["m",1.5],["BLD",["m",1.5]]],accuracy:100,critical:7,AP:5,MODE:"P",elem:"AIR",TT:"SINGLE",pfx:"slash_air"});
+techInfo.Merc.skills[i - 1].desc = "Deals 50% more damage to Paralysed or Bleeding enemies and also has an extra 7% chance to Crit.";
+i = techInfo.Merc.skills.push({skill:"Immoral Injustice",type:"ACT",DMG:["m",1],elemBonus:[["DARK",["m",1.5]],["LIGHT",["m",1.5]]],MP:5,accuracy:100,critical:0,AP:10,MODE:"P",elem:"AETHER",TT:"SINGLE",pfx:"immoral"});
+techInfo.Merc.skills[i - 1].desc = "Deals 50% extra damage to both LIGHT and DARK opponents.";

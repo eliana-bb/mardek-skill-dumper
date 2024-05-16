@@ -1,0 +1,16 @@
+var i;
+techInfo.Elem = {name:"Elemancy",icon:8,desc:"Cast magic that utilises the power of the natural elements.",skills:[]};
+i = techInfo.Elem.skills.push({skill:"Magic Vortex",type:"ACT",DMG:["c",15,"L*0.75"],MP:5,accuracy:100,critical:0,AP:5,MODE:"M",elem:"THAUMA",TT:"SINGLE",pfx:"whirlpool_thauma"});
+techInfo.Elem.skills[i - 1].desc = "A basic THAUMA spell: raw magical energy directed to attack an opponent. This one seems to have taken the appearance of a whirlpool.";
+i = techInfo.Elem.skills.push({skill:"Flame",type:"ACT",DMG:["c",13,"L*0.75"],stfx:{NUM:20},MP:8,accuracy:100,critical:0,AP:10,MODE:"M",elem:"FIRE",TT:"ANY",pfx:"flame1"});
+techInfo.Elem.skills[i - 1].desc = "Makes the target(s) erupt in flames, inflicting FIRE damage with a 20% chance to cause Numb.";
+i = techInfo.Elem.skills.push({skill:"Lightning Bolt",type:"ACT",DMG:["c",13,"L*0.75"],stfx:{PAR:20},MP:8,accuracy:100,critical:0,AP:10,MODE:"M",elem:"AIR",TT:"ANY",pfx:"bolt1"});
+techInfo.Elem.skills[i - 1].desc = "An electric zap from the heavens that inflicts AIR damage on the target(s) with a 20% chance to Paralyse.";
+i = techInfo.Elem.skills.push({skill:"Stone",type:"ACT",DMG:["c",13,"L*0.75"],MP:8,accuracy:100,critical:0,AP:10,MODE:"M",elem:"EARTH",TT:"ANY",pfx:"stone1",stfx:{PSN:20}});
+techInfo.Elem.skills[i - 1].desc = "Drops a large stone on the target(s), inflicting EARTH damage with a 20% chance to Poison.";
+i = techInfo.Elem.skills.push({skill:"Bubble",type:"ACT",DMG:["c",13,"L*0.75"],stfx:{SIL:20},MP:8,accuracy:100,critical:0,AP:10,MODE:"M",elem:"WATER",TT:"ANY",pfx:"bubble1"});
+techInfo.Elem.skills[i - 1].desc = "The target(s) become crushed by a large bubble, inflicting WATER damage with a 20% chance to Silence.";
+i = techInfo.Elem.skills.push({skill:"Mistical Rain",type:"ACT",DMG:14,MP:24,stat_mod:{MDEF:1},stfx:{SIL:100},ignore_shield:true,AP:5,MODE:"M",elem:"WATER",TT:"ALL_p",pfx:"rain_water",ALL_PFX:true,CENTRED:true,special:{HEALING:1}});
+techInfo.Elem.skills[i - 1].desc = "The party\'s HP is slightly restored by a peaceful, yet sorrowful rain. This healing is amplified by MDEF. The potent magical energy increases MDEF by 1 and cures Silence.";
+i = techInfo.Elem.skills.push({skill:"Aqualung",type:"ACT",MP:1,accuracy:100,AP:1,stfx:{UWB:100},MODE:"M",elem:"WATER",TT:"ANY",special:{HEALING:1},menuse:"ONLY",ADD_STFX:true});
+techInfo.Elem.skills[i - 1].desc = "An unusual and unique spell that grants the target the ability to breathe underwater. Don\'t worry, you won\'t grow gills. Probably.";

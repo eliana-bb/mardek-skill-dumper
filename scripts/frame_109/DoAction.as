@@ -1,0 +1,18 @@
+var i;
+techInfo.Royality = {name:"Royality",icon:28,desc:"The Powers of our King Of Goznor!",skills:[]};
+i = techInfo.Royality.skills.push({skill:"Shield Slash",type:"ACT",DMG:["m",1],remove_stfx:{PSH:100,MSH:100},MP:25,critical:50,accuracy:90,AP:15,MODE:"P",elem:"NONE",TT:"SINGLE",pfx:"shieldbreak",sfx:"slash_deep"});
+techInfo.Royality.skills[i - 1].desc = "A mighty Sword attack which use it is to penetrate and destroy both of the enemy\'s Physical and Magical Shield!";
+i = techInfo.Royality.skills.push({skill:"Blaze",type:"ACT",DMG:["m",1.6],MP:14,critical:5,accuracy:100,AP:10,MODE:"M",elem:"FIRE",TT:"ANY",pfx:"flame2"});
+techInfo.Royality.skills[i - 1].desc = "This is Flame\'s older brother. He rides a large motorbike and does things with girls that Flame is too young to understand.";
+i = techInfo.Royality.skills.push({skill:"Thunderbolt",type:"ACT",DMG:["c",20,"L*1.25"],MP:12,critical:5,accuracy:100,AP:10,MODE:"M",elem:"AIR",TT:"ANY",pfx:"bolt2"});
+techInfo.Royality.skills[i - 1].desc = "This is Lightning Bolt\'s older sister. She wears makeup and has these strange things on her chest that she uses to fight crime, Lightning Bolt imagines.";
+i = techInfo.Royality.skills.push({skill:"Stonesplosion",type:"ACT",DMG:["c",20,"L*1.25"],MP:12,critical:5,accuracy:100,AP:10,MODE:"M",elem:"EARTH",TT:"ANY",pfx:"stonesplosion"});
+techInfo.Royality.skills[i - 1].desc = "Lets stones explode on the target(s), inflicting EARTH damage.";
+i = techInfo.Royality.skills.push({skill:"Bubble",type:"ACT",DMG:["c",20,"L*1.25"],MP:12,critical:5,accuracy:100,AP:10,MODE:"M",elem:"WATER",TT:"ANY",pfx:"bubble1"});
+techInfo.Royality.skills[i - 1].desc = "The target is crushed by a large bubble, inflicting WATER damage.";
+i = techInfo.Royality.skills.push({skill:"Inferno",type:"ACT",DMG:["m",2.2],MP:36,critical:0,accuracy:100,AP:10,MODE:"M",elem:"FIRE",TT:"ANY",pfx:"firestorm"});
+techInfo.Royality.skills[i - 1].desc = "TBD.";
+i = techInfo.Royality.skills.push({skill:"Burn",type:"ACT",DMG:["c",30,"L*1.4"],MP:20,accuracy:100,AP:5,stfx:{NUM:40},stat_mod:{DEF:[2,2]},MODE:"M",elem:"FIRE",TT:"SINGLE",pfx:"burn"});
+techInfo.Royality.skills[i - 1].desc = "TBD.";
+i = techInfo.Royality.skills.push({skill:"Sear",type:"ACT",DMG:["m",1.4],MP:16,accuracy:100,AP:10,stfx:{NUM:20},remove_stfx:{RGN:100},stat_mod:{STR:[1]},MODE:"P",elem:"FIRE",TT:"SINGLE",pfx:"burn"});
+techInfo.Royality.skills[i - 1].desc = "Magically enchant your Sword with FIRE to may inflict Numbness, dispel Regen and reduce STR by 1.";

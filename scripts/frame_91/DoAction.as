@@ -1,0 +1,12 @@
+var i;
+techInfo.PyroCh2 = {name:"Pyromancy",icon:35,desc:"Donovan\'s a novice Pyromancer, specializing in FIRE magic.",skills:[]};
+i = techInfo.PyroCh2.skills.push({skill:"Magic Flame",type:"ACT",DMG:["c",15,"L*1"],MP:5,accuracy:100,critical:0,AP:5,MODE:"M",elem:"THAUMA",TT:"SINGLE",pfx:"flame_thauma"});
+techInfo.PyroCh2.skills[i - 1].desc = "A basic THAUMA spell: raw magical energy. This one seems to have taken the appearance of flames.";
+i = techInfo.PyroCh2.skills.push({skill:"Singe",type:"ACT",DMG:["m",1.25],typeBonus:[["HUMAN",["m",1.25]],["INSECT",["m",1.25]]],stfx:{NUM:25},MP:3,critical:0,accuracy:100,AP:5,MODE:"P",elem:"FIRE",TT:"SINGLE",pfx:"soulstrike_fire"});
+techInfo.PyroCh2.skills[i - 1].desc = "Burn your enemies! Hits with 125% ATK, has 25% chance to cause Numbness and is especially powerful against HUMAN and INSECT type opponents.";
+i = techInfo.PyroCh2.skills.push({skill:"Ember",type:"ACT",DMG:["c",18,"L*1.25"],MP:6,accuracy:100,critical:0,AP:10,MODE:"M",elem:"FIRE",TT:"SINGLE",pfx:"flame1",stfx:{NUM:15}});
+techInfo.PyroCh2.skills[i - 1].desc = "Summon hot embers, inflicting FIRE damage with a 15% chance to Numb.";
+i = techInfo.PyroCh2.skills.push({skill:"Cremate",type:"ACT",DMG:["c",15,"L*1"],typeBonus:[["UNDEAD",["m",1.75]]],MP:15,accuracy:100,AP:10,MODE:"M",elem:"FIRE",TT:"SINGLE",pfx:"grimenergyfire",sfx:"flame1"});
+techInfo.PyroCh2.skills[i - 1].desc = "Weaker FIRE magic, but specialises in killing UNDEAD by dealing 75% extra damage against them.";
+i = techInfo.PyroCh2.skills.push({skill:"Pyro Shell",type:"ACT",MP:15,buff:true,AP:5,stfx:{SHF:100},stat_mod:{STR:[-1],MDEF:[-1]},MODE:"S",elem:"FIRE",TT:"SINGLE",pfx:"null_fire"});
+techInfo.PyroCh2.skills[i - 1].desc = "Gives the target Pyro Shell, which deals FIRE damage to attackers, as well as increasing target MDEF and STR by 1 each.";

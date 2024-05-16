@@ -1,0 +1,18 @@
+var i;
+techInfo.Thief = {name:"Thievery",icon:23,desc:"Use your stealth, burglary, pickpocketing and lockpicking skills to ... cause status effects? All skills are 95% accurate.",skills:[]};
+i = techInfo.Thief.skills.push({skill:"Fake Out!",type:"ACT",DMG:["m",1.5],MP:7,accuracy:95,critical:0,stfx:{CNF:45},AP:7,MODE:"P",elem:"NONE",TT:"SINGLE",pfx:"critical"});
+techInfo.Thief.skills[i - 1].desc = "Flinch the target! Confuses 45% of the time and deals fierce damage.";
+i = techInfo.Thief.skills.push({skill:"Hamstring",displayname:"Fleshwound",type:"ACT",DMG:["m",1.5],MP:7,accuracy:95,critical:0,stfx:{BLD:45},AP:7,MODE:"P",elem:"NONE",TT:"SINGLE",pfx:"sting_drk"});
+techInfo.Thief.skills[i - 1].desc = "Knicks an artery, dealing fierce damage and causing Bleeding 45% of the time.";
+i = techInfo.Thief.skills.push({skill:"Kneecap",type:"ACT",DMG:["m",1.5],MP:7,accuracy:95,critical:0,stfx:{PAR:45},AP:7,MODE:"P",elem:"AIR",TT:"SINGLE",pfx:"soulstrike_air"});
+techInfo.Thief.skills[i - 1].desc = "Vennie twists and disfigures the kneecap or support structure joint of the target, resulting in a lifelong injury, fierce AIR damage, and a 45% chance of Paralysis.";
+i = techInfo.Thief.skills.push({skill:"Disarm",displayname:"Butterfinger",type:"ACT",DMG:["m",1.3],MP:6,accuracy:95,critical:0,stfx:{NUM:55},AP:7,MODE:"P",elem:"FIRE",TT:"SINGLE",pfx:"numbpunch"});
+techInfo.Thief.skills[i - 1].desc = "Target the enemy\'s arm, dealing decent FIRE damage and a 55% chance of Numb.";
+i = techInfo.Thief.skills.push({skill:"Slit Throat",displayname:"Got Your Tongue",type:"ACT",DMG:["m",1.3],MP:6,accuracy:95,critical:0,stfx:{SIL:55},AP:7,MODE:"P",elem:"WATER",TT:"SINGLE",pfx:"soulstrike_water"});
+techInfo.Thief.skills[i - 1].desc = "Slit your enemy\'s throat, dealing decent WATER damage which Silences them 55% of the time but somehow doesn\'t kill them instantly.";
+i = techInfo.Thief.skills.push({skill:"Slumberstab",type:"ACT",DMG:["m",1.1],MP:5,accuracy:95,critical:0,stfx:{SLP:65},AP:7,MODE:"P",elem:"LIGHT",TT:"SINGLE",pfx:"sting_slp"});
+techInfo.Thief.skills[i - 1].desc = "Poke the soft spot, causing modest LIGHT damage and Sleep 65% of the time.";
+i = techInfo.Thief.skills.push({skill:"Eye Gouge",displayname:"Eye For A...Knife?",type:"ACT",DMG:["m",1.1],MP:5,accuracy:95,critical:0,stfx:{DRK:65},AP:7,MODE:"P",elem:"DARK",TT:"SINGLE",pfx:"soulstrike_dark"});
+techInfo.Thief.skills[i - 1].desc = "Insert your knife into the vision capability device of your adversary to reduce their ability to perceive adequately. In other words, it deals modest damage and causes Blindness 65% of the time.";
+i = techInfo.Thief.skills.push({skill:"Viperfang",type:"ACT",DMG:["m",1.1],MP:5,accuracy:95,critical:0,stfx:{PSN:65},AP:7,MODE:"P",elem:"EARTH",TT:"SINGLE",pfx:"sting_psn"});
+techInfo.Thief.skills[i - 1].desc = "Vennie coats his blade in a mysterious Poison and, then, well, you know, stabs the target with it and all. Deals modest EARTH damage and Poisons 65% of the time.";

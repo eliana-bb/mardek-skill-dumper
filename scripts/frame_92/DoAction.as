@@ -1,0 +1,12 @@
+var i;
+techInfo.AeroCh2 = {name:"Aeromancy",icon:36,desc:"Sharla\'s a novice Aeromancer, specializing in AIR magic.",skills:[]};
+i = techInfo.AeroCh2.skills.push({skill:"Magic Bolt",type:"ACT",DMG:["c",15,"L*1"],MP:5,accuracy:100,critical:0,AP:5,MODE:"M",elem:"THAUMA",TT:"SINGLE",pfx:"bolt_thauma"});
+techInfo.AeroCh2.skills[i - 1].desc = "A basic THAUMA spell: raw magical energy. This one seems to have taken the appearance of lightning.";
+i = techInfo.AeroCh2.skills.push({skill:"Spark",type:"ACT",DMG:["c",18,"L*1.25"],MP:6,accuracy:100,critical:0,AP:10,MODE:"M",elem:"AIR",TT:"SINGLE",pfx:"soulstrike_air",sfx:"bolt1",stfx:{PAR:15},elemBonus:[["WATER",["m",1.25]]]});
+techInfo.AeroCh2.skills[i - 1].desc = "Magical electricity shocks the target, with a 15% chance of Paralysis. Deals 25% extra damage to WATER element foes.";
+i = techInfo.AeroCh2.skills.push({skill:"Serene Breeze",type:"ACT",DMG:34,MP:8,stfx:{PAR:100},AP:10,MODE:"M",ignore_shield:true,ignore_def:true,elem:"AIR",TT:"SINGLE",stat_mod:{AGL:2},pfx:"windcure",special:{HEALING:1},menuse:1});
+techInfo.AeroCh2.skills[i - 1].desc = "A gentle, comforting breeze heals the target, removes Paralysis, and increases AGL by 2.";
+i = techInfo.AeroCh2.skills.push({skill:"Tailwind",type:"ACT",DMG:14,MP:12,AP:5,no_dmg_split:true,ignore_def:true,ignore_shield:true,stfx:{RGN:7.5},stat_mod:{AGL:[2]},MODE:"M",elem:"AIR",TT:"ALL_p",ALL_PFX:true,pfx:"wingblade",special:{HEALING:1}});
+techInfo.AeroCh2.skills[i - 1].desc = "Creates a tailwind, raising the party\'s AGL by 2 points and heals them an itty tiny bit. 7.5% chance to grant Regen, since fresh air is good for you. Go outside and see!";
+i = techInfo.AeroCh2.skills.push({skill:"Aero Shell",type:"ACT",MP:15,buff:true,AP:5,stfx:{SHA:100},stat_mod:{AGL:[-1],DEF:[-1]},MODE:"S",elem:"AIR",TT:"SINGLE",pfx:"null_air"});
+techInfo.AeroCh2.skills[i - 1].desc = "Gives the target Aero Shell, which deals AIR damage to attackers as well as increasing target DEF and AGL by 1 each.";

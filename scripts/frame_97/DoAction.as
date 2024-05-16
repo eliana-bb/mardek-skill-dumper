@@ -1,0 +1,18 @@
+var i;
+techInfo.Band = {name:"Lightning Thievery",icon:25,desc:"Ironically, there is no thievery involved in this skillset. But there are a lot of fun gun-themed moves and AIR magic skills.",skills:[]};
+i = techInfo.Band.skills.push({skill:"Gemsplosion: Topaz",type:"ACT",DMG:["c",20,"L*0.75"],MP:14,stat_mod:{SPR:1,MDEF:1},critical:0,accuracy:100,AP:5,MODE:"M",elem:"AIR",ignore_def:true,TT:"ANY",pfx:"gemsplosion_topaz"});
+techInfo.Band.skills[i - 1].desc = "Muriance is so obsessed with those damn crystals, and banditry for that matter, that he even stole their signature attack. He\'s pretty good at it though... it also ignores MDEF and reduces SPR and MDEF by 1.";
+i = techInfo.Band.skills.push({skill:"Haste",type:"ACT",MP:50,accuracy:100,stfx:{HST:100},AP:5,MODE:"S",elem:"AIR",TT:"SINGLE",pfx:"haste"});
+techInfo.Band.skills[i - 1].desc = "Inflicts haste on a single target.";
+i = techInfo.Band.skills.push({skill:"Thunderbolt",type:"ACT",DMG:["c",30,"L*1"],MP:12,accuracy:100,critical:5,AP:5,MODE:"M",elem:"AIR",TT:"ANY",pfx:"bolt2"});
+techInfo.Band.skills[i - 1].desc = "You\'d think Muriance stole this spell from somewhere or something, but no, he\'s just a naturally talented magician. Don\'t get him wrong, he is also a naturally talented thief, so he could\'ve stolen it. But he didn\'t. This time.";
+i = techInfo.Band.skills.push({skill:"Thunderstorm",type:"ACT",DMG:20,no_dmg_split:true,MP:18,critical:0,accuracy:100,stfx:{PAR:50},stat_mod:{AGL:1},AP:5,MODE:"M",elem:"AIR",TT:"ALL_e",pfx:"thunderstorm",ALL_PFX:true,CENTRED:true});
+techInfo.Band.skills[i - 1].desc = "A big bolty jolt of electricity hits all foes for a small amount of AIR damage and a large chance to Paralyze, while also lowering their AGL by 1.";
+i = techInfo.Band.skills.push({skill:"Sleeping Gas",type:"ACT",MP:12,accuracy:100,stfx:{SLP:80,SIL:30},AP:5,MODE:"S",elem:"AIR",TT:"ALL_e",pfx:"gas_all_sleep",ALL_PFX:true});
+techInfo.Band.skills[i - 1].desc = "Put all foes to sleepy sleep. Give \'em a good snooze. A restful schnoooor mimimi. Muriance grew up without ever having a safe or comfortable place to sleep, y\'see, and in his own twisted mind this is his way of helping others. To sleep. So he can rob them.";
+i = techInfo.Band.skills.push({skill:"Aeropolitan Roulette",type:"ACT",MP:17,DMG:["SPECIAL","set_dmg",7777],RANGED_ATK:true,critical:1,ignore_shield:true,ignore_def:true,accuracy:17,AP:5,MODE:"P",elem:"NONE",TT:"SINGLE",sfx:"Slam"});
+techInfo.Band.skills[i - 1].desc = "One-in-six chance to score a headshot, inflicting instant death on your enemy! Well, technically 7,777 shield-and-defense-ignoring damage, because insta-killing bosses is a bit broken....even for a lawless bandit chief.";
+i = techInfo.Band.skills.push({skill:"Thermantidote",type:"ACT",DMG:["m",1],MP:14,accuracy:75,AP:5,MODE:"P",sfx:"gunshot1",elem:"NONE",TT:"ALL_e",no_dmg_split:true,BREATH:true});
+techInfo.Band.skills[i - 1].desc = "Shoots many enemies in quick succession, dealing PHYSICAL damage to all of them. 75% accuracy.";
+i = techInfo.Band.skills.push({skill:"Silver Bullet",type:"ACT",MP:9,DMG:["m",1],critical:1,accuracy:100,AP:5,MODE:"P",elem:"LIGHT",TT:"SINGLE",sfx:"gunshot1",pfx:"laserbeam",stat_mod:{STR:1},typeBonus:[["BEAST",["m",2]],["MAGICAL_BEAST",["m",2]],["DEMON",["m",2]]]});
+techInfo.Band.skills[i - 1].desc = "Muriance is very paranoid about many things, including werewolves. Lowers the target\'s STR by 1 and also does double damage to BEAST, MAGICAL BEAST, and DEMON enemy types.";

@@ -1,0 +1,14 @@
+var i;
+techInfo.Hero = {name:"Powers",icon:4,desc:"The mighty powers of a True Hero!",skills:[]};
+i = techInfo.Hero.skills.push({skill:"Smite Evil",type:"ACT",DMG:["m",2.8],MP:15,accuracy:100,critical:0,AP:20,MODE:"P",elem:"LIGHT",TT:"SINGLE",pfx:"smiteevil"});
+techInfo.Hero.skills[i - 1].desc = "A powerful physical attack that deals LIGHT damage.";
+i = techInfo.Hero.skills.push({skill:"Shock",type:"ACT",DMG:["m",2.8],stfx:{PAR:100},MP:10,accuracy:100,critical:0,AP:20,MODE:"P",elem:"AIR",TT:"SINGLE",pfx:"shock"});
+techInfo.Hero.skills[i - 1].desc = "A thunderous slash that causes AIR damage and Paralysis.";
+i = techInfo.Hero.skills.push({skill:"Sunder",type:"ACT",DMG:["m",2.8],stfx:{PSN:100},MP:10,accuracy:100,critical:0,AP:20,MODE:"P",elem:"EARTH",TT:"SINGLE",pfx:"sunder"});
+techInfo.Hero.skills[i - 1].desc = "A mighty gash in the fabric of space that causes EARTH damage and Poison.";
+i = techInfo.Hero.skills.push({skill:"Pyromagia",type:"ACT",DMG:280,MP:15,accuracy:100,critical:0,AP:20,MODE:"M",elem:"FIRE",TT:"ANY",pfx:"pyromagia"});
+techInfo.Hero.skills[i - 1].desc = "A powerful FIRE magic attack.";
+i = techInfo.Hero.skills.push({skill:"Frostasia",type:"ACT",DMG:280,MP:15,accuracy:100,critical:0,AP:20,MODE:"M",elem:"WATER",TT:"ANY",pfx:"frostasia"});
+techInfo.Hero.skills[i - 1].desc = "A powerful WATER magic attack.";
+i = techInfo.Hero.skills.push({skill:"Recover",type:"ACT",DMG:60,stfx:{PSN:100,DRK:100,CRS:100,PAR:100,NUM:100,SIL:100,CNF:100,SLP:100,ZOM:100,BLD:100},MP:75,AP:20,MODE:"M",elem:"LIGHT",TT:"SELF",pfx:"cure2",special:{HEALING:1},menuse:0});
+techInfo.Hero.skills[i - 1].desc = "LIGHT magic which restores the user\'s own HP and cures all negative status effects.";

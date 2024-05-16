@@ -1,0 +1,16 @@
+var i;
+techInfo.WhMag = {name:"Princess Magic",icon:21,desc:"Aalia\'s signature LIGHT magic with her own bright pink touch!",skills:[]};
+i = techInfo.WhMag.skills.push({skill:"Bombshell Bolt",type:"ACT",DMG:["c",15,"L*1"],typeBonus:[["ABBERATION",["m",1.5]],["INSECT",["m",1.5]]],MP:5,accuracy:100,critical:0,AP:5,MODE:"M",elem:"THAUMA",TT:"SINGLE",sfx:"slam",pfx:"bolt_aalia"});
+techInfo.WhMag.skills[i - 1].desc = "A hot pink magical attack learned by magical girls. Deals double damage to gross ABBERATION and INSECT creature types!";
+i = techInfo.WhMag.skills.push({skill:"Blushing Blaze",type:"ACT",DMG:["c",15,"L*1"],MP:12,critical:0,accuracy:100,AP:5,MODE:"M",special:{DRAIN:0.2},elem:"LIGHT",TT:"SINGLE",pfx:"flame_aalia"});
+techInfo.WhMag.skills[i - 1].desc = "A powerful burst of neon pink fire deals LIGHT damage and drains 20% of damage dealt as HP back to Aalia.";
+i = techInfo.WhMag.skills.push({skill:"Glittering Glimmer",displayname:"Glow-up!",type:"ACT",DMG:["c",38,"L*0.75"],typeBonus:[["UNDEAD",["m",1.33]]],stfx:{RGN:100},ignore_shield:true,ignore_def:true,MP:12,AP:5,MODE:"M",elem:"LIGHT",TT:"SINGLE",pfx:"purecure",special:{HEALING:1},menuse:1});
+techInfo.WhMag.skills[i - 1].desc = "A big sparkly single-target heal that applies the Regen status to the target, as well as touching up their make-up with some highlighter. Has a 33% damage bonus if used offensively on UNDEAD enemy types!";
+i = techInfo.WhMag.skills.push({skill:"Shimmering Shine",displayname:"Glitter Glitz",type:"ACT",DMG:["c",20,"L*0.4"],stfx:{DRK:100},stfx:{BSK:100},MP:18,no_dmg_split:true,ignore_shield:true,ignore_def:true,AP:5,MODE:"M",elem:"LIGHT",TT:"ALL_p",pfx:"cure_sparkle",ALL_PFX:true,special:{HEALING:1},menuse:1});
+techInfo.WhMag.skills[i - 1].desc = "Aalia summons a big glittery explosion that heals the whole party, as well as dispelling Blindness and Berserk.";
+i = techInfo.WhMag.skills.push({skill:"Sparkling Spectrum",displayname:"Blessing",type:"ACT",MP:24,AP:3,stfx:{BUB:100},special:{HEALING:1,REVIVE:0.5},MODE:"S",elem:"LIGHT",TT:"SINGLE",pfx:"blessing",ignore_shield:true,ignore_def:true});
+techInfo.WhMag.skills[i - 1].desc = "Channel the power of love and friendship to revive a single ally with 50% HP as well as granting Bubble.";
+i = techInfo.WhMag.skills.push({skill:"Breathtaking Bubble",displayname:"Princess\' Protection",type:"ACT",stfx:{BUB:100},MP:10,AP:5,pfx:"bshield",buff:true,MODE:"S",TT:"SINGLE",elem:"LIGHT"});
+techInfo.WhMag.skills[i - 1].desc = "Apply Aalia\'s signature pink Bubble status effect, reducing 25% of damage from physical and magical attacks and giving them a warm, fuzzy, tingly feeling inside accompanied by cute images of puppies and rainbows.";
+i = techInfo.WhMag.skills.push({skill:"Radiant Ray",displayname:"Rainbow Sparkle",type:"ACT",MP:10,DMG:[1,99],accuracy:95,AP:5,MODE:"M",elem:"LIGHT",TT:"SINGLE",pfx:"flare_rainbow"});
+techInfo.WhMag.skills[i - 1].desc = "Rainbows flash on the target, dealing VERY random damage. 95% accurate.";

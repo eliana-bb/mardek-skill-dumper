@@ -1,0 +1,2 @@
+ItemList.push({name:"Dagger",type:"wepn",wpnType:"DAGGER",atk:20,critical:15,hit:95,cost:50,hit_sfx:"puncture1",desc:"A basic steel dagger.",skills:[["Thief","Kneecap"],["Thief","Viperfang"],["R:P_ATK","Filthy Blade"],["R:P_ATK","Critical+5%"]]});
+ItemList.push({name:"Curved Dagger",type:"wepn",wpnType:"DAGGER",atk:40,critical:15,hit:95,cost:5000,hit_sfx:"puncture1",desc:"A curved dagger.",effects:[["STR",2],["VIT",1],["AGL",1]],skills:[["Thief","Eye Gouge"],["R:P_ATK","P Critical+10%"]]});

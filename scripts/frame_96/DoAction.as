@@ -1,0 +1,14 @@
+var i;
+techInfo.BrawlCh3 = {name:"Martial Arts",icon:9,desc:"Perform various unarmed combat moves.",skills:[]};
+i = techInfo.BrawlCh3.skills.push({skill:"Brutal Strike",type:"ACT",DMG:["m",2],MP:1,accuracy:70,critical:10,AP:5,MODE:"P",elem:"NONE",TT:"SINGLE",sfx:"punch1",pfx:"powerhit"});
+techInfo.BrawlCh3.skills[i - 1].desc = "Beat the [PROFANITY] out of the target, hitting them with 200% ATK. Only 70% accuracy though.";
+i = techInfo.BrawlCh3.skills.push({skill:"Shut The Hell Up!",type:"ACT",DMG:["m",1],stfx:{SIL:75},MP:3,accuracy:95,critical:10,AP:5,MODE:"P",elem:"DARK",TT:"SINGLE",pfx:"mutepunch"});
+techInfo.BrawlCh3.skills[i - 1].desc = "Beat the voicebox out of the annoying mother [PROFANITY].";
+i = techInfo.BrawlCh3.skills.push({skill:"Arm Breaker",type:"ACT",DMG:["m",1],stfx:{NUM:75},MP:3,accuracy:95,critical:10,AP:5,MODE:"P",elem:"FIRE",TT:"SINGLE",pfx:"numbpunch"});
+techInfo.BrawlCh3.skills[i - 1].desc = "Snap someone\'s arms in two like a twig, to render them useless for physical attacks.";
+i = techInfo.BrawlCh3.skills.push({skill:"Stunner!",type:"ACT",DMG:["m",1],stfx:{PAR:75},MP:3,accuracy:95,critical:10,AP:5,MODE:"P",elem:"AIR",TT:"SINGLE",pfx:"stunpunch"});
+techInfo.BrawlCh3.skills[i - 1].desc = "Inflict Paralysis on an unsuspecting pansy by punching them in their tackle box.";
+i = techInfo.BrawlCh3.skills.push({skill:"Catastrophic Punch",type:"ACT",DMG:["m",2,null,["descendo",0.25]],stat_mod:{VIT:2},MP:10,accuracy:90,critical:10,AP:5,MODE:"P",elem:"DARK",TT:"SINGLE",pfx:"catpunch"});
+techInfo.BrawlCh3.skills[i - 1].desc = "Punch someone so hard that it\'ll reduce their vitality by 2 and cause ALL OF THEIR ORGANS TO EXPLODE!1. This skill is very strong at first, but is reduced in power by 25% for each time it has been used.";
+i = techInfo.BrawlCh3.skills.push({skill:"Chakra",type:"ACT",DMG:100,MP:0,stfx:{NUM:100},ignore_shield:true,ignore_def:true,stat_mod:{SPR:1,STR:1},accuracy:255,AP:5,MODE:"M",elem:"FIRE",TT:"SELF",pfx:"chakra",special:{HEALING:1},menuse:1});
+techInfo.BrawlCh3.skills[i - 1].desc = "Channel the energy of your awesome body to recover HP, remove Numbness and increase STR/SPR by 1.";

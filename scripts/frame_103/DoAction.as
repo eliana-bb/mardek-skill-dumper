@@ -1,0 +1,14 @@
+var i;
+techInfo.Necromancy = {name:"Necromancy",icon:26,desc:"Ironically this is Moric\'s main usage of magic .",skills:[]};
+i = techInfo.Necromancy.skills.push({skill:"Stonesplosion",type:"ACT",DMG:["c",30,"L*1.5"],MP:8,accuracy:100,critical:5,AP:10,MODE:"M",elem:"EARTH",TT:"ANY",pfx:"stonesplosion"});
+techInfo.Necromancy.skills[i - 1].desc = "Lets stones explode on the target(s), inflicting EARTH damage.";
+i = techInfo.Necromancy.skills.push({skill:"Arcane Cataclysm",type:"ACT",DMG:["m",2.2],stat_mod:{MDEF:1},no_dmg_split:true,MP:20,accuracy:100,critical:0,AP:10,MODE:"M",elem:"EARTH",TT:"ALL_e",pfx:"gdmwave_earth",ALL_PFX:true,CENTRED:true});
+techInfo.Necromancy.skills[i - 1].desc = "The Special Spell of the Annunaki. Hit the whole enemy Party with tremendous Power (220% DMG))!";
+i = techInfo.Necromancy.skills.push({skill:"Drain",type:"ACT",DMG:["c",25,"L*1,2"],MP:12,accuracy:100,AP:15,MODE:"M",elem:"DARK",TT:"SINGLE",pfx:"drain",special:{DRAIN:0.5}});
+techInfo.Necromancy.skills[i - 1].desc = "Inflicts dmg to the enemy and drains their lifeforce to strengthen yours.";
+i = techInfo.Necromancy.skills.push({skill:"Wither",type:"ACT",DMG:["c",25,"L*0,55"],stat_mod:{VIT:[1,1]},MP:10,accuracy:100,AP:1,MODE:"M",elem:"EARTH",TT:"SINGLE",pfx:"energy_burst_EARTH"});
+techInfo.Necromancy.skills[i - 1].desc = "Reduces Vitality.";
+i = techInfo.Necromancy.skills.push({skill:"Earthquake",type:"ACT",DMG:["m",1.8],no_dmg_split:true,MP:10,critical:0,accuracy:100,AP:15,MODE:"M",elem:"EARTH",TT:"ALL_e",pfx:"earthquake",ALL_PFX:true,CENTRED:true,ARENA:false});
+techInfo.Necromancy.skills[i - 1].desc = "Inflicts 180% earth damage on all targets with a big quake.";
+i = techInfo.Necromancy.skills.push({skill:"Caustic Crush",type:"ACT",DMG:["c",25,"L*0,8"],MP:15,accuracy:100,stfx:{PSN:35,PAR:10,SIL:10},AP:10,MODE:"M",elem:"EARTH",TT:"SINGLE",pfx:"vooze"});
+techInfo.Necromancy.skills[i - 1].desc = "Crushes the enemy and may cause them to Poison, Paralysis or Silence.";

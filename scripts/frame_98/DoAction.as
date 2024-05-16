@@ -1,0 +1,10 @@
+var i;
+techInfo.Fight = {name:"Fighter Techs",icon:22,desc:"Perform various combat moves. Yeah, uh, lots of varied techniques, too many to count. Bartholio\'s awesome that way.",skills:[]};
+i = techInfo.Fight.skills.push({skill:"Power Attack",type:"ACT",DMG:["m",2.5],MP:5,accuracy:66,critical:0,AP:1,MODE:"P",elem:"NONE",TT:"SINGLE",sfx:"slash_deep",pfx:"powerhit"});
+techInfo.Fight.skills[i - 1].desc = "An all out swing, dealing 250% damage but with only 66% accuracy.";
+i = techInfo.Fight.skills.push({skill:"Power Defense",type:"ACT",DMG:["m",0.5],MP:3,accuracy:100,stfxBonus:["PSH",["m",2],["BUB",["m",2]]],critical:15,cannot_miss:true,ignore_shield:true,AP:5,MODE:"P",elem:"NONE",TT:"SINGLE",pfx:"powerhit"});
+techInfo.Fight.skills[i - 1].desc = "An attack that never misses, ignoring shields. Deals double damage if the target has a P. Shield or Bubble. High crit rate.";
+i = techInfo.Fight.skills.push({skill:"Soulstrike!",type:"ACT",DMG:["m",1],MP:5,accuracy:100,critical:0,AP:5,MODE:"P",elem:"LIGHT",TT:"SINGLE",sfx:"slash_deep",pfx:"soulstrike_light"});
+techInfo.Fight.skills[i - 1].desc = "Wait, this is an offensive reaction skill! How did Bartholio get it in his skillset?!?1!";
+i = techInfo.Fight.skills.push({skill:"Glorious Pose",type:"ACT",MP:0,AP:5,MODE:"S",elem:"LIGHT",TT:"SELF",sfx:"VictoryFanfare2"});
+techInfo.Fight.skills[i - 1].desc = "Pose gloriously.";

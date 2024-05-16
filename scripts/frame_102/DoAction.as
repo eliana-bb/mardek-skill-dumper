@@ -1,0 +1,14 @@
+var i;
+techInfo.EvBes = {name:"Evil Bestowement",icon:29,desc:"Moric\'s necromancy has transformed Sylvia\'s Shaman abilities into spoOOoky powers!",skills:[]};
+i = techInfo.EvBes.skills.push({skill:"Sinister Thrash",type:"ACT",DMG:["m",2.3],MP:3,accuracy:70,stat_mod:{DEF:2},critical:0,AP:5,MODE:"P",elem:"NONE",TT:"SINGLE",pfx:"soulstrike_dark"});
+techInfo.EvBes.skills[i - 1].desc = "Strike the target without restraint, dealing 230% damage but with only 70% accuracy. The aggression catches the target off guard, and reduces DEF by 2.";
+i = techInfo.EvBes.skills.push({skill:"Trembly Touch",type:"ACT",DMG:["m",1.4],MP:6,critical:0,stat_mod:{VIT:2},accuracy:100,AP:10,MODE:"P",elem:"DARK",TT:"SINGLE",stfx:{DRK:50},pfx:"darkclaw"});
+techInfo.EvBes.skills[i - 1].desc = "Sylvia strikes the target fiercefully with her claws, reducing VIT by 2 with a 50% chance to Blind.";
+i = techInfo.EvBes.skills.push({skill:"Shady Sludge",type:"ACT",DMG:["c",14,"L*0.5"],MP:12,accuracy:100,stfx:{DRK:25,PSN:25,CNF:25},stfxBonus:["DRK",["m",1.25],["PSN",["m",0.25],["CNF",["m",0.25]]]],usesEmpower:"DARK",AP:1,MODE:"S",elem:"WATER",TT:"ANY",pfx:"bubblerot"});
+techInfo.EvBes.skills[i - 1].desc = "A disgusting, magically diseased muddling of toxic slime assaults the target(s) with equal chances to Poison, Blind, and/or Confuse. Does 25% extra damage per each of those statuses already applied to the target(s). Uses DARK Empower stat. What kind of foul witchcraft was Sylvia even up to in that Grotto?";
+i = techInfo.EvBes.skills.push({skill:"Wormhole",type:"ACT",DMG:["c",15,"L*1"],ignore_def:true,ignore_shield:true,remove_stfx:{MSH:50,BUB:50},MP:14,stat_mod:{MDEF:1},usesEmpower:"DARK",accuracy:100,AP:5,MODE:"M",elem:"EARTH",TT:"SINGLE",pfx:"grimenergy"});
+techInfo.EvBes.skills[i - 1].desc = "A small, localized portal opens up around the target, inflicting M. Shield and MDEF-ignoring EARTH damage. Uses DARK Empower stat. 50% chance to remove M. Shield and 100% chance to reduce MDEF by 1.";
+i = techInfo.EvBes.skills.push({skill:"Fissure",type:"ACT",DMG:["c",20,"L*1"],no_dmg_split:true,MP:22,critical:0,stfxBonus:["DRK",["m",1.5]],accuracy:100,AP:5,MODE:"M",elem:"DARK",TT:"ALL_e",pfx:"darkside",ALL_PFX:true});
+techInfo.EvBes.skills[i - 1].desc = "A storm of DARK energy unleashes upon all foes, dealing 50% extra damage against Blinded foes.";
+i = techInfo.EvBes.skills.push({skill:"Dark Gift",type:"ACT",MP:80,accuracy:100,buff:true,stfx:{HST:100},stat_mod:{AGL:-3,SPR:-3,STR:-3},AP:5,MODE:"S",elem:"DARK",TT:"SELF",pfx:"dark_gift",sfx:"monster_undead"});
+techInfo.EvBes.skills[i - 1].desc = "Using Moric\'s granted powers, provide yourself with Haste as well as increase STR/SPR/AGL by 3. Only useable on Sylvia. Sorry, necromatically transformed zombies aren\'t great team players!";

@@ -8,6 +8,7 @@ from equip import Equip
 def main():
     player_classes: dict[str, PlayerClass] = {}
     skills: dict[str, list[Skill]] = {}
+    equips: list[Equip] = []
     for folder in os.listdir("scripts"):
         with open(f"scripts/{folder}/DoAction.as") as infile:
             for line in infile.readlines():
@@ -19,8 +20,9 @@ def main():
                     if tmp_skill.tech not in skills:
                         skills[tmp_skill.tech] = []
                     skills[tmp_skill.tech].append(tmp_skill)
-                elif re.search("ItemList\.push", line) and re.search("skills:\[", line):
-                    pass
+                elif re.search(r"ItemList\.push", line) and re.search(r"skills:\[", line):
+                    tmp_equip = Equip.from_line(line)
+                    equips.append(tmp_equip)
     pass
 
 

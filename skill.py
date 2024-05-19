@@ -20,5 +20,5 @@ class Skill:
             only_techs = None
         else:
             only_techs = re.findall(r"(\w+):true", onlies[0])
-        masterable = "unmasterable:1" not in push_line
+        masterable = "unmasterable:1" not in push_line and "AP:-1" not in push_line
         return Skill(skill_name, skill_tech, only_techs, masterable)

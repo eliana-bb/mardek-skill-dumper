@@ -6,7 +6,7 @@ class PlayerClass:
         self.class_id = class_id
         self.class_name = class_name
         self.techs = [tech, "P_ATK", "P_DEF", "M_ATK", "M_DEF", "PASSIVE"]
-        self.equips = equip_types.copy()
+        self.equips = equip_types.copy() + ["accs", "gems"]
 
     @staticmethod
     def from_line(class_stats: str):

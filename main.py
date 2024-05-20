@@ -14,6 +14,7 @@ def parse_files(
     for folder in os.listdir("scripts"):
         with open(f"scripts/{folder}/DoAction.as") as infile:
             for line in infile.readlines():
+                line = line.replace("\\", "")
                 if re.match(r"classStats\.\w+ = ", line):
                     tmp_class = PlayerClass.from_line(line)
                     player_classes[tmp_class.class_id] = tmp_class

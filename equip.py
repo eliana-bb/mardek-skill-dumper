@@ -10,7 +10,7 @@ class Equip:
 
     @staticmethod
     def from_line(push_line: str):
-        name = re.findall(r"name:\"([^\"]+)\"", push_line)[0].replace("\\", "")
+        name = re.findall(r"name:\"([^\"]+)\"", push_line)[0]
         item_type = (
                 re.findall(r"wpnType:\"([^\"]+)\"", push_line) +
                 re.findall(r"amrType:\"([^\"]+)\"", push_line) +
@@ -23,7 +23,4 @@ class Equip:
             skills = []
         onlies = re.findall(r"only_user:\"([^\"]+)\"", push_line)
         only_user = onlies[0] if len(onlies) > 0 else None
-        if only_user is not None:
-            if "\\" in only_user:
-                only_user = only_user.replace("\\", "")
         return Equip(name, item_type, skills, only_user)
